@@ -36,13 +36,13 @@ public class Task1 {
     }
     else {
         int n;
-            for (x=a;x<=b;x=x+h){
-                for (n=1; (2*x)!=(3.14 / 2) + (3.14 * n++);){//проверка на область определения функции tg
-                    double FunctionValue= Math.tan(2*x) - 3;
-                    System.out.println(x + "   |   " + FunctionValue + "\n");
-                    break;
-                }
+        for (x=a;x<=b;x=x+h){
+            for (n=1; (2*x)!=(3.14 / 2) + (3.14 * n++);){//проверка на область определения функции tg
+                double FunctionValue= Math.tan(2*x) - 3;
+                System.out.println(x + "   |   " + FunctionValue + "\n");
+                break;
             }
+        }
     }
     }  
 }
