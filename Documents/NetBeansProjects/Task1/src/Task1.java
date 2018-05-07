@@ -20,11 +20,9 @@ public class Task1 {
     
     System.out.print("Введите левую границу отрезка (а):");
     a = scan.nextDouble();
-    //scan.close();
     
     System.out.print("Введите правую границу отрезка (b):");
     b = scan.nextDouble();
-    //scan.close(); 
     
     System.out.print("Введите шаг (h):");
     h = scan.nextDouble();
