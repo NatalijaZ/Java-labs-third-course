@@ -40,7 +40,7 @@ public class Task1 {
                 for (n=1; (2*x)!=(3.14 / 2) + (3.14 * n++);){//проверка на область определения функции tg
                     double FunctionValue= Math.tan(2*x) - 3;
                     System.out.println(x + "   |   " + FunctionValue + "\n");
-                    break;//x=x+h;
+                    break;
                 }
             }
     }
