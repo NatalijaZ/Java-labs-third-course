@@ -35,12 +35,13 @@ public class Task1 {
         System.out.println("Число \"h\" должно быть больше или равно \"b-a\"");
     }
     else {
-        int n;
         for (x=a;x<=b;x=x+h){
-            for (n=1; (2*x)!=(3.14 / 2) + (3.14 * n++);){//проверка на область определения функции tg
+            if (x!=(3.14 / 2 + 3.14 * 1)/2&x!=(3.14 / 2 + 3.14 * 2)/2){//проверка на область определения функции tg
                 double FunctionValue= Math.tan(2*x) - 3;
                 System.out.println(x + "   |   " + FunctionValue + "\n");
-                break;
+            }
+            else {
+                System.out.print(x + "   |   " + "Нарушена область определения функции!\n");
             }
         }
     }
