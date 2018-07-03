@@ -16,13 +16,13 @@ import java.util.Date;// импорт класса Date для вывода да
 import java.util.Scanner;// импорт класса Scanner для ввода параметра
 // класс для создания потоков
 class MyThreads extends Thread{//класс MyThreads наследует класс Thread
-    String number_of_worker;
-    String duties_of_worker;
+    String numberOfWorker;
+    String dutiesOfWorker;
     
     @Override//аннотация, указывающая, что далее мы собираемся переопределять метод базового класса
     // переопределение метода run()
     public void run(){
-        System.out.println(number_of_worker + " работник начинает " + duties_of_worker);
+        System.out.println(numberOfWorker + " работник начинает " + dutiesOfWorker);
     
         for(int i=1;i<=5;i++){
             try{
@@ -38,8 +38,8 @@ class MyThreads extends Thread{//класс MyThreads наследует кла�
     }
     // конструктор класса для создания потоков
     MyThreads(String number, String str){
-        number_of_worker = number;
-        duties_of_worker = str;
+        numberOfWorker = number;
+        dutiesOfWorker = str;
         // Создание и запуск потока (методом start() вызываем метод run()):
         start();
     }
