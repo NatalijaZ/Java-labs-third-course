@@ -17,17 +17,44 @@ public class SimpleSwapTest {
         System.out.println("\nAfter SimpleSwap.class");
     }
     
-    /**
-     * Test of swap method, of class SimpleSwap.
-     */
     @Test
     public void testSwap() {
-        System.out.println("Тестируем метод swap");
+        System.out.println("---Тестируем метод swap---");
         int i = 3;
         int j = 0;
         int[] anArray = {2,5,4,7,9,16};
         boolean expResult = true;
-        boolean result = SimpleSwap.swap(i, j, anArray);
+        //класс ReturnFromSwap - вложенный, поэтому указываем полный путь
+        SimpleSwap.ReturnFromSwap resultOfSwap=new SimpleSwap.ReturnFromSwap();
+        boolean result = resultOfSwap.swap(i, j, anArray);
         assertEquals("Метод работает неверно!",expResult, result);
+    }  
+    
+    @Test
+    public void testSwap2() {
+        System.out.println("---Тестируем метод swap---");
+        int i = -3;
+        int j = 0;
+        int[] anArray = {2,5,4,7,9,16};
+        boolean expResult = false;
+        SimpleSwap.ReturnFromSwap resultOfSwap=new SimpleSwap.ReturnFromSwap();
+        boolean result = resultOfSwap.swap(i, j, anArray);
+        assertEquals("Метод работает неверно!",expResult, result);
+    }  
+    
+    /*
+     * проверяем, действительно ли в полученном массиве переставлены элементы
+     */
+    
+    @Test
+    public void testSwap3() {
+        System.out.println("---Тестируем метод swap---");
+        int i = 2;
+        int j = 0;
+        int[] anArray = {2,5,4,7,9,16};
+        int[] expResult = {4,5,2,7,9,16};
+        SimpleSwap.ReturnFromSwap resultOfSwap=new SimpleSwap.ReturnFromSwap();
+        resultOfSwap.swap(i, j, anArray);
+        assertArrayEquals("Метод работает неверно!",expResult, anArray);
     }  
 }
