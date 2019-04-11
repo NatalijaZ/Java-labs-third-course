@@ -187,10 +187,10 @@ public class optimize {
                         y1=yBest;
                         x2=xGood;
                         y2=yGood;    
-                    }
-                
+                    }    
             }
-        System.out.printf ("(");
+            
+            System.out.printf ("(");
             System.out.printf ("%.2f",xBest);
             System.out.printf (";");
             System.out.printf ("%.2f", yBest);
@@ -208,8 +208,6 @@ public class optimize {
             System.out.printf ("%.2f", yBad);
             System.out.printf (")");
             System.out.printf ("%.3f \n", badValue);
-			}
-		
-    }
-    
+        }	
+    }  
 }
