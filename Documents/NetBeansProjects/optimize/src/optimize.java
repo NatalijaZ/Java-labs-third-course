@@ -1,5 +1,8 @@
-import static java.lang.Math.*;
-        
+/*
+ * Поиск минимума квадратичной функции и функции Розенброка 
+ * с использованием алгоритма оптимизации Нелдера-Мида
+ */
+
 public class optimize {
     public static void main(String[] args) {
         //double x0=0.0, y0=1.0,
@@ -10,9 +13,9 @@ public class optimize {
                x1=-2.5, y1=3,
                x2=-0.3,  y2=1.5;
         //////////////////////////////////////
-        double xRef=0.0,
-               yRef=0.0,
-               fRef=0.0;
+        double xRef,
+               yRef,
+               fRef;
         System.out.println ("*****minBest***************goodValue*************badValue");
         //for (int i=0; i<4; i++){
         for (int i=0; i<56; i++){
@@ -111,10 +114,10 @@ public class optimize {
             //*********Функция Розенброка*********
             fRef=100*Math.pow(Math.pow(xRef,2)-yRef,2)+Math.pow(1-xRef,2);
             //растяжение
-            double xExpansion=0.0,
-                   yExpansion=0.0,
-                   xContr=0.0,
-                   yContr=0.0;
+            double xExpansion,
+                   yExpansion,
+                   xContr,
+                   yContr;
             if (fRef<minBest) {
                 xExpansion=2*xRef-xMid;
                 yExpansion=2*yRef-yMid;
